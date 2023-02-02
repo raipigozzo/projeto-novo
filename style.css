@@ -88,11 +88,14 @@ body * {
   left: 0;
   z-index: 1;
   transform: translateY(-50%);
+
+  animation: slide-back 0.3s;
 }
 
 .light #switch button {
   right: 0;
   left: initial;
+  animation: slide-in 0.3s forwards;
 }
 
 #switch button:hover {
@@ -164,12 +167,32 @@ ul li a:hover {
   text-align: center;
 }
 
+/* ajuste da imagem de acordo com o tamanho da tela */
 @media (min-width: 700px) {
   :root {
-    --image-background: url(./seets/bg-desktop.jpg);
+    --image-background: url(./assets/bg-desktop.jpg);
   }
 
   .light {
-    --image-background: url(./seets/bg-desktop-light.jpg);
+    --image-background: url(./assets/bg-desktop-light.jpg);
+  }
+}
+
+/* animation */
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-back {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
   }
 }
