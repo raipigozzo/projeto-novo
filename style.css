@@ -34,6 +34,7 @@ body {
   /* background segue esta ordem: color image repeat position/size */
 
   background: var(--image-background) no-repeat top center/ cover;
+  height: 100%;
 }
 
 body * {
@@ -42,7 +43,8 @@ body * {
 }
 
 #conteiner {
-  width: 360px;
+  width: 100%;
+  max-width: 588px;
   margin: 56px auto 0px;
 }
 
@@ -94,8 +96,7 @@ body * {
 }
 
 #switch button:hover {
-  box-shadow: 0px 2px 8px var(--backgroud-midias-hover);
-  border-radius: 9999px;
+  outline: 9px solid var(--backgroud-midias-hover);
 }
 
 #switch span {
@@ -161,4 +162,14 @@ ul li a:hover {
 #rodape {
   padding: 24px;
   text-align: center;
+}
+
+@media (min-width: 700px) {
+  :root {
+    --image-background: url(./seets/bg-desktop.jpg);
+  }
+
+  .light {
+    --image-background: url(./seets/bg-desktop-light.jpg);
+  }
 }
