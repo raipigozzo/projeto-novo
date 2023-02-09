@@ -3,10 +3,23 @@
   padding: 0px;
   box-sizing: border-box;
 }
+#menu {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem 0px;
+  backdrop-filter: blur(4px);
+}
+
+.inicio {
+  text-align: center;
+}
+
+.inicio li {
+  display: inline-block;
+  padding: 0px 24px;
+}
 
 :root {
   --text-geral: #ffffff;
-  --image-background: url(./assets/bg-mobile.jpg);
   --background-list: rgba(255, 255, 255, 0.1);
   --border-list: rgba(255, 255, 255, 0.5);
   --background-list-hover: rgba(255, 255, 255, 0.05);
@@ -17,7 +30,6 @@
 
 .light {
   --text-geral: black;
-  --image-background: url(./assets/bg-mobile-ligth.jpg);
   --background-list: rgba(0, 0, 0, 0.05);
   --border-list: rgba(0, 0, 0, 0.5);
   --background-list-hover: rgba(0, 0, 0, 0.2);
@@ -32,9 +44,15 @@ body {
     background-position: top center;
     background-size: cover; */
   /* background segue esta ordem: color image repeat position/size */
-
-  background: var(--image-background) no-repeat top center/ cover;
   height: 100%;
+  background: linear-gradient(
+    to right,
+    black,
+    rgb(76, 45, 98),
+    rgb(29, 35, 51),
+    rgb(57, 18, 49),
+    black
+  );
 }
 
 body * {
@@ -55,6 +73,8 @@ body * {
 
 #profile img {
   width: 112px;
+  height: 112px;
+  border-radius: 50%;
 }
 
 #profile p {
@@ -113,7 +133,7 @@ body * {
 }
 
 /* lista */
-ul {
+.lista {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -121,7 +141,7 @@ ul {
   list-style: none;
 }
 
-ul li a {
+.lista li a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -138,23 +158,26 @@ ul li a {
   transition: background 2s;
 }
 
-ul li a:hover {
+.lista li a:hover {
   background: solid var(--background-list-hover);
   border: 1.5px solid var(--border-list-hover);
 }
 
 /* social-links  */
 #social-links {
-  display: flex;
   padding: 24px;
+  position: fixed;
 
-  font-size: 24px;
-  justify-content: center;
+  font-size: 30px;
+  justify-content: left;
 }
 
 #social-links a {
   display: flex;
   padding: 16px;
+
+  margin-left: 50px;
+  margin-top: 5px;
 }
 
 #social-links a:hover {
@@ -162,9 +185,22 @@ ul li a:hover {
   border-radius: 50px;
 }
 
+.barra {
+  border: 1px solid rgb(255, 255, 255);
+
+  height: 120px;
+  width: 2px;
+
+  margin-top: 20px;
+  margin-left: 80px;
+}
+
 #rodape {
   padding: 24px;
   text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 /* ajuste da imagem de acordo com o tamanho da tela */

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br" class="light">
+<html lang="pt-br">
   <head>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,10 +13,20 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projeto</title>
+
+    <title>Portifólio</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <div id="menu">
+      <ul class="inicio">
+        <li>Ínicio</li>
+        <li>Sobre</li>
+        <li>Habilidades</li>
+        <li>Projetos</li>
+      </ul>
+    </div>
+
     <div id="conteiner">
       <div id="profile">
         <img src="./assets/avatar.png" alt="Imagem não encontrada" />
@@ -28,30 +38,16 @@
         <span></span>
       </div>
 
-      <ul>
-        <li><a href="#">Inscreva-se no NLW</a></li>
+      <ul class="lista">
+        <li><a href="#">Conheça meu projeto</a></li>
         <li><a href="#">Baixe meu e-book</a></li>
-        <li><a href="">Veja meu portfólio</a></li>
+        <li><a href="#">Veja meu portfólio</a></li>
         <li>
           <a href="https://rocketseat.com.br/explorer" target="_blank"
             >Conheça o Explorer</a
           >
         </li>
       </ul>
-      <div id="social-links">
-        <a href="https://github.com/raipigozzo/" target="_blank">
-          <ion-icon name="logo-github"></ion-icon>
-        </a>
-        <a href="https://www.instagram.com/raipigozzo_/" target="_blank">
-          <ion-icon name="logo-instagram"></ion-icon>
-        </a>
-        <a
-          href="https://www.linkedin.com/in/raielle-pigozzo-mendes-6b9246248"
-          target="_blank"
-        >
-          <ion-icon name="logo-linkedin"></ion-icon>
-        </a>
-      </div>
       <script
         type="module"
         src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
@@ -62,9 +58,32 @@
       ></script>
 
       <script src="./script.js"></script>
-      <div id="rodape">
-        <p>Feito com <ion-icon name="heart"></ion-icon> pela Raielle</p>
-      </div>
+    </div>
+
+    <div id="social-links">
+      <a href="https://github.com/raipigozzo/" target="_blank">
+        <ion-icon name="logo-github"></ion-icon>
+      </a>
+
+      <a href="https://www.instagram.com/raipigozzo_/" target="_blank">
+        <ion-icon name="logo-instagram"></ion-icon>
+      </a>
+
+      <a href="https://www.instagram.com/raipigozzo_/" target="_blank">
+        <ion-icon name="logo-facebook"></ion-icon>
+      </a>
+
+      <a
+        href="https://www.linkedin.com/in/raielle-pigozzo-mendes-6b9246248"
+        target="_blank"
+      >
+        <ion-icon name="logo-linkedin"></ion-icon>
+      </a>
+      <div class="barra"></div>
+    </div>
+
+    <div id="rodape">
+      <p>Feito com <ion-icon name="heart"></ion-icon> pela Rai</p>
     </div>
   </body>
 </html>
